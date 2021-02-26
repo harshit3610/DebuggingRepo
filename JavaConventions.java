@@ -1,4 +1,4 @@
-package OPENCSV;
+package company;
 
 import com.opencsv.CSVParser;
 import com.opencsv.CSVParserBuilder;
@@ -10,38 +10,33 @@ import java.io.IOException;import java.io.Reader;import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-public class ReadingCSV {
- public static void main(String[] args) throws IOException, CsvException {
+public class JavaConventions {
+    public static void main(String[] args) throws IOException, CsvException {
         Reader reader= Files.newBufferedReader(Paths.get("Student.txt"));
-
-        //parser!
-   CSVParser Parser=new CSVParserBuilder()
+        CSVParser Parser=new CSVParserBuilder()
                 .withSeparator('\t')
                 .build();
 
 
-    CSVReader Obj1=new CSVReaderBuilder(reader)
+        CSVReader Object=new CSVReaderBuilder(reader)
                 .withCSVParser(parser)
-                			.build();
+                .build();
 
 
-        //read the contents of the file!
 
-        		List<String[]> data=obj.readAll(); //returns a list of Strings from the file
-//3 ways for using data
-
-//        for(int i=0;i<4;i++) {
-//            							   System.out.println(data.get(i)[0]);// 0th line object
-//        }
+        List<String[]> data=object.readAll(); //returns a list of Strings from the file
+        for(int index=0;index<4;index++) {
+            System.out.println(data.get(index)[0]);// 0th line object
+        }
 
 
         for(String  arr[]: data){
-           			 System.out.println(arr[0]);
+            System.out.println(arr[0]);
         }
 
-//        data.stream()
-//               				 .forEach(x-> System.out.println(x[0]));
+        data.stream()
+                .forEach(x-> System.out.println(x[0]));
     }	
-
+    
 }
 
