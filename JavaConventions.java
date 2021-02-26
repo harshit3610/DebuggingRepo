@@ -10,13 +10,13 @@ import java.io.IOException;import java.io.Reader;import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-public class ReadingCSV {
+public class ReadingCsv {
     public static void main(String[] args) throws IOException, CsvException {
         Reader reader= Files.newBufferedReader(Paths.get("Student.txt"));
         CSVParser Parser=new CSVParserBuilder()
                 .withSeparator('\t')
                 .build();
-        CSVReader Obj1=new CSVReaderBuilder(reader)
+        CSVReader object=new CSVReaderBuilder(reader)
                 .withCSVParser(parser)
                 .build();
         //read the contents of the file!
