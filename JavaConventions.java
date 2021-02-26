@@ -33,8 +33,8 @@ public class JavaConventions {
         List<String[]> data=objectOne.readAll(); //returns a list of Strings from the file
 
         //3 ways for using data
-//      for(int i=0;i<4;i++){
-//          System.out.println(data.get(i)[0]);// 0th line object
+//      for(int index=0;index<4;index++){
+//          System.out.println(data.get(index)[0]);// 0th line object
 //      }
 
 
