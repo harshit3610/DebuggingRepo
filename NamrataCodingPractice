@@ -32,7 +32,7 @@ public class JavaConventions {
             System.out.println(data.get(index)[0]);// 0th line object
         }
 
-        for(String[]  array: data){
+        for(String  array[]: data){
             System.out.println(array[0]);
         }
 
