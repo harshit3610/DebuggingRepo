@@ -25,20 +25,19 @@ public class JavaConventions {
 
         //read the contents of the file!
         List<String[]> data=object.readAll(); //returns a list of Strings from the file
-//3 ways for using data
 
+//3 ways for using data
         for(int row=0;row<4;row++) {
             System.out.println(data.get(row)[0]);// 0th line object
         }
 
 
-        for(String[]  arr: data){
-           			 System.out.println(arr[0]);
+        for(String[]  row: data){
+           			 System.out.println(row[0]);
         }
 
 //        data.stream()
-//                .forEach(x-> System.out.println(x[0]));
+//                .forEach(x-> System.out.println(row[0]));
     }
-
 }
 
