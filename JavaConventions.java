@@ -16,11 +16,11 @@ public class JavaConventions {
         CSVParser parser=new CSVParserBuilder()
                 .withSeparator('\t')
                 .build();
-        CSVReader obj=new CSVReaderBuilder(reader)
+        CSVReader object=new CSVReaderBuilder(reader)
                 .withCSVParser(parser)
                 			.build();
         //read the contents of the file!
-        List<String[]> data=obj.readAll(); //returns a list of Strings from the file
+        List<String[]> data=object.readAll(); //returns a list of Strings from the file
 
 
      // 3 ways for using data
