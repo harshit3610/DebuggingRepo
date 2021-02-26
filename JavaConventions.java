@@ -21,7 +21,7 @@ public class ReadingCsv {
                 .build();
         //read the contents of the file!
         List<String[]> data=obj.readAll();                 //returns a list of Strings from the file
-        for(String  arr[]: data){
+        for(String[]  arr: data){
             System.out.println(arr[0]);
         }
     }	
