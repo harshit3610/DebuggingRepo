@@ -22,22 +22,19 @@ public class ReadingCSV {
                 .build();
 
 
-        CSVReader Obj1=new CSVReaderBuilder(reader)
+        CSVReader object=new CSVReaderBuilder(reader)
                 .withCSVParser(parser)
                 .build();
 
-
         //read the contents of the file!
 
-        List<String[]> data=Obj1.readAll(); //returns a list of Strings from the file
-                                           //3 ways for using data
+        List<String[]> data=object.readAll(); //returns a list of Strings from the file
 
         for(int i=0;i<4;i++) {
             System.out.println(data.get(i)[0]);// 0th line object
         }
 
-
-        for(String  arr[]: data){
+        for(String[] arr : data){
             System.out.println(arr[0]);
         }
 
