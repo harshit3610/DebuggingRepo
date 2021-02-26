@@ -30,8 +30,8 @@ public class ReadingCSV {
 
         List<String[]> data=object.readAll(); //returns a list of Strings from the file
 
-        for(int i=0;i<4;i++) {
-            System.out.println(data.get(i)[0]);// 0th line object
+        for(int count=0;count<4;count++) {
+            System.out.println(data.get(count)[0]);// 0th line object
         }
 
         for(String[] arr : data){
