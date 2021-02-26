@@ -33,11 +33,23 @@ public class JavaConventions {
 
         List<String[]> data = object.readAll(); //returns a list of Strings from the file
         //3 ways for using data
-        //String arr[]=data.get(i);
-        for (int i = 0; i < 4; i++) {
-            String arr[] = data.get(i);
-            System.out.println(data.get(i)[0]);// 0th line object
+
+        for (int index = 0; index < 4; index++) {
+
+            System.out.println(data.get(index)[0]);// 0th line object
         }
 
+
+        for(String  index[]: data){
+            System.out.println(index[0]);
+        }
+
+       
+        data.stream()
+                .forEach(index-> System.out.println(index[0]));
     }
+
 }
+
+
+
