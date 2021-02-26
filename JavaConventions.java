@@ -36,7 +36,7 @@ public class ReadingCSV {
 
 
         for(String  arr[]: data){
-           			 System.out.println(arr[0]);
+           			  System.out.println(arr[0]);
         }
 
 //       data.stream()
