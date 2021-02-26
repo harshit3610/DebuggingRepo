@@ -19,12 +19,12 @@ public class ReadingCSV {
                 .withSeparator('\t')
                 .build();
 
-        CSVReader obj=new CSVReaderBuilder(reader)
+        CSVReader csvReader=new CSVReaderBuilder(reader)
                 .withCSVParser(parser)
                 .build();
 
         //read the contents of the file!
-        List<String[]> data=obj.readAll(); //returns a list of Strings from the file
+        List<String[]> data=csvReader.readAll(); //returns a list of Strings from the file
 
         //3 ways for using data
 
