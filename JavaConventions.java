@@ -10,32 +10,32 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class JavaConventions {
- public static void main(String[] args) throws IOException, CsvException {
-        Reader reader= Files.newBufferedReader(Paths.get("inputs.txt"));
+    public static void main(String[] args) throws IOException, CsvException {
+        Reader reader= Files.newBufferedReader(Paths.get("Student.txt"));
         //parser!
         CSVParser parser=new CSVParserBuilder()
                 .withSeparator('\t')
                 .build();
         CSVReader object=new CSVReaderBuilder(reader)
                 .withCSVParser(parser)
-                			.build();
+                .build();
         //read the contents of the file!
         List<String[]> data=object.readAll(); //returns a list of Strings from the file
 
 
-     // 3 ways for using data
-        for(int i=0;i<4;i++) {
-            System.out.println(data.get(i)[0]);// 0th line object
+        // 3 ways for using data
+        for(int rowIndex=0;rowIndex<4;rowIndex++) {
+            System.out.println(data.get(rowIndex)[0]);// 0th line object
         }
 
 
-        for(String  arr[]: data){
-            System.out.println(arr[0]);
+        for(String[]  array: data){
+            System.out.println(array[0]);
         }
 
         data.stream()
-                .forEach(x-> System.out.println(x[0]));
- }
+                .forEach(rowIndex-> System.out.println(rowIndex[0]));
+    }
 
 }
 
